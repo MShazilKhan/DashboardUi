@@ -27,7 +27,8 @@ html,body{
 
 body{
     font-family: var(--body-font);
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+    background-color: blue;
     overflow-x: hidden;
 
 }
