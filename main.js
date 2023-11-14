@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
- 
-            toggleCardsOnClick()
-            activeStateItems(items);
-            toggleEmployeeCardOnClick();
+          toggleSidebar();
+          toggleCardsOnClick();
+          toggleEmployeeCardOnClick();
 
             
         })
@@ -32,8 +31,7 @@ items.forEach(item => {
 const activeStateItems = (items)=>{
     items.forEach((item)=>{
         console.log(item);
-        item.classList.toggle('paddingZero')
-        item.classList.toggle('p-0')
+
     })
 }
 
@@ -48,6 +46,13 @@ const toggleCardsOnClick = ()=>{
 const toggleEmployeeCardOnClick = ()=>{
     let employeeContainer = document.querySelector('.bottom-container')
     employeeContainer.classList.toggle('toggleEmployeeCard');
+}
+
+const toggleSidebar = ()=>{
+  const sidebar = document.querySelector('.sidebar')
+  if(sidebar){
+    sidebar.classList.toggle('toggleSidebar')
+  }
 }
 
 
