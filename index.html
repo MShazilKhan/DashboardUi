@@ -15,15 +15,26 @@
 
 <body>
 
-  <nav class="navbar bg-dark">
-    <h1>Dashboard</h1>
-
+  <!-- top navbar -->
+  <nav class="navbar">
+    <div class="navbar-items">
+      <div class="input-group">
+        <button class="menu-icon"><i class="ri-menu-fold-fill menu-icon"></i></button>
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button type="button" class="search-button btn btn-outline-primary">search</button>
+      </div>
+      <div class="navbar-icons">
+        <i class="ri-notification-2-fill"></i>
+        <i class="ri-list-settings-line"></i>
+        <div class="profile"></div>
+      </div>
+    </div>
   </nav>
 
   <section class="sidebar">
-    <a href="#" id="sidebar-heading">Metrics Manage</a>
+    <a href="#"><i class="ri-close-fill close-icon"></i></a>
+    <a href="#" id="sidebar-heading"><img src="logoUpdated.png">Metrics Manage</a>
     <hr>
-    <div>
       <ul class="sidebar-items">
         <a href="#"><li><i class="ri-dashboard-line"></i>Dashboard</li></a>
         <a href="#"><li><i class="ri-layout-line"></i>Layouts</li></a>
@@ -40,15 +51,12 @@
         <a href="#"><li><i class="ri-clipboard-line"></i>Copy</li></a>
         <a href="#"><li><i class="ri-calendar-2-line"></i>Calender</li></a>
       </ul>
-    </div>
   </section>
-  <!-- large screens -->
- 
-  <!-- small screens -->
+
  
   <!-- top cards -->
   
-    <div class="cards  d-flex flex-wrap mt-3">
+    <div class="cards">
       <div class="card">
         <div class="graphics d-flex justify-content-between">
           <div><span class="material-icons visits">bar_chart</span></div>

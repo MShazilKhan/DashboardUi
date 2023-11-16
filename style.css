@@ -32,13 +32,66 @@ body{
 
 }
 
-
-
-/* <!-- top cards styling--> */
-
 li{
     list-style: none;
 }
+
+a{
+    text-decoration: none;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    z-index: 15;
+    width: 100%;
+    background: var(--white-color);
+}
+.navbar .navbar-items{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navbar .navbar-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.navbar .navbar-icons i{
+    font-size: 20px;
+}
+.navbar .navbar-icons .profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: lightgrey;
+}
+.input-group{
+    width: 43%;
+    margin-left: 250px;
+    padding: 0 5px;
+    transition: all .3s ease;
+}
+.input-group-toggle{
+    margin-left: 60px;
+
+}
+
+.menu-icon i{
+    font-size: 30px;
+}
+.navbar-items .input-group .menu-icon{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+}
+
+
+
 .sidebar{
     width: 250px;
     position: fixed;
@@ -53,11 +106,26 @@ li{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.close-icon{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    color: black;
+}
+#sidebar-heading{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-left: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
 .sidebar::-webkit-scrollbar{
     display: none;
 }
-
-
 
 
 .sidebar .sidebar-items a li{
@@ -67,7 +135,7 @@ li{
     margin-top: 10px;
     padding: 5px 2px 5px 10px;
     border-radius: 5px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-transform: capitalize;
 }
 
@@ -75,6 +143,8 @@ li{
     width: 50px;
     padding: 0;
 }
+
+
 .sidebar .sidebar-items a li:hover{
     background-color: var(--hover-item-color);
 }
@@ -86,9 +156,9 @@ li{
 .sidebar .sidebar-items a i{
     margin-right: 15px;
     font-size: 1.7rem;
-    font-weight: bold;
 }
 .cards{
+    margin-top: 70px;
     margin-left: 100px;
     gap: 15px;
     display: flex;
@@ -173,11 +243,12 @@ li{
     }
    
     .employee-card{
-        margin-left: 0;
+        margin-left: 0px;
         width: 100%;
     }
     .bottom-container #salesChart{
         width: 100%;
+
     }
    
 }
@@ -186,6 +257,8 @@ li{
 @media screen and (max-width: 650px) {
     .cards{
         justify-content: center;
+        background-color: teal;
+        margin-top: 110px;
         margin-left: 0;
         padding: 0;
     }
@@ -206,7 +279,26 @@ li{
         display: none;
     }
    
-    
+    /* sidebar */
+    .toggleSidebar{
+        width: 0;
+    }
+
+    /* top navbar */
+    .navbar-items{
+        flex-direction: column;
+
+    }
+    .navbar-items div{
+        width: 100%;
+    }
+    .navbar-items div[class="input-group"]{
+        margin-left: 0;
+    }
+    .input-group-toggle{
+        margin-left: 0;
+    }
+
     
 }
 

@@ -48,12 +48,38 @@ const toggleEmployeeCardOnClick = ()=>{
     employeeContainer.classList.toggle('toggleEmployeeCard');
 }
 
+let logoAdded=false;
+
 const toggleSidebar = ()=>{
   const sidebar = document.querySelector('.sidebar')
-  if(sidebar){
-    sidebar.classList.toggle('toggleSidebar')
+  const toggleBtn = document.querySelector('.menu-icon')
+  const inputElems = document.querySelector('.input-group')
+  const closeIcon = document.querySelector('.close-icon')
+  if(screen.width<=650){
+    closeIcon.style.display='block';
+  }else{
+    closeIcon.style.display='none';
   }
+
+  toggleBtn.addEventListener('click',()=>{
+  sidebar.classList.toggle('toggleSidebar')
+  inputElems.classList.toggle('input-group-toggle')
+ 
+
+})
+  toggleSidebarWithCloseBtn(sidebar)
 }
+
+
+
+const toggleSidebarWithCloseBtn = (sidebar)=>{
+    const closeIcon = document.querySelector('.close-icon')
+    closeIcon.addEventListener('click', ()=>{
+        sidebar.classList.toggle('toggleSidebar')
+    })
+
+}
+
 
 
 
