@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
+          activeStateItems()
           toggleSidebar();
           toggleCardsOnClick();
           toggleEmployeeCardOnClick();
@@ -9,34 +10,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     
   
-   
-
-
-
-
-const items = document.querySelectorAll('.nav_list div  a');
-
-items.forEach(item => {
-  item.addEventListener('click', () => {
-    items.forEach(item => {
-      item.classList.remove('active');
-    });
-
-    // toggle the 'active' class to the clicked item
-    item.classList.toggle('active');
-  });
-});
-
-
-const activeStateItems = (items)=>{
-    items.forEach((item)=>{
-        console.log(item);
-
+const activeStateItems = ()=>{
+  const sidebarItems = document.querySelectorAll('.sidebar .sidebar-items a li')
+  console.log(sidebarItems)
+  sidebarItems.forEach((item)=>{
+    item.addEventListener('mouseover',()=>{
+      item.classList.add('onHover')
     })
+    item.addEventListener('mouseleave',()=>{
+      item.classList.remove('onHover')
+    })
+    item.addEventListener('click', () => {
+          sidebarItems.forEach(item => {
+            item.classList.remove('active');
+      });
+      item.classList.add('active')
+  })
+})
+
 }
-
-
-
+  
 const toggleCardsOnClick = ()=>{
     let cardsContainer = document.querySelector('.cards')
     console.log("hello carsd continaer");
