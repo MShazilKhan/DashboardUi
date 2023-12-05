@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
           toggleSidebar();
           toggleCardsOnClick();
           toggleEmployeeCardOnClick();
+          toggleDropdown();
+          closeDropdown();
 
             
         })
@@ -75,6 +77,21 @@ const toggleSidebarWithCloseBtn = (sidebar)=>{
 
 
 
+const toggleDropdown = ()=>{
+  const profile  = document.querySelector('.profile')  
+  const dropdown  = document.querySelector('.dropdown')  
+  profile.addEventListener('click', (event)=>{
+    event.stopPropagation();
+    dropdown.classList.toggle('showDropdown');
+  })
+
+}
+const dropdown  = document.querySelector('.dropdown')  
+document.addEventListener("click", function () {
+if(dropdown.classList.contains('showDropdown')) {
+  dropdown.classList.remove('showDropdown')
+}
+});
 
 // apex chart
 var options = {

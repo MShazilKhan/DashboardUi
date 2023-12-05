@@ -71,7 +71,45 @@ a{
     background-color: lightgrey;
     background-image: url(newicon.png);
     background-size: cover;
+    position: relative;
+    cursor: pointer;
 }
+
+.dropdown{
+    visibility: none;
+    opacity: 0;
+    background-color: var(--white-color);
+    width: 200px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding: 10px 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-top: 10px;
+    transition: .3s all ease;
+}
+.dropdown a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+.dropdown a:hover{
+    background-color: #F2F2F2;
+
+}
+
+.showDropdown{
+    visibility: visible;
+    opacity: 1;
+}
+
+
 .input-group{
     width: 43%;
     margin-left: 250px;
@@ -104,6 +142,7 @@ a{
     left: 0;
     height: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
     z-index: 20;
     padding: 5px 20px 0px 10px;
     transition: all .4s ease;
@@ -137,7 +176,7 @@ a{
     align-items: center;
     text-decoration: none;
     margin-top: 10px;
-    padding: 3px 2px 3px 10px;
+    padding: 1px 2px 1px 9px;
     border-radius: 5px;
     font-size: 1rem;
     text-transform: capitalize;
@@ -165,8 +204,10 @@ a{
 }
 
 .active{
-    background-color: var(--active-bg-color);
-    color: var(--white-color);
+    /* background-color: var(--active-bg-color); */
+    /* color: var(--white-color); */
+    color: black;
+    font-weight: bold;
 }
 .cards{
     margin-top: 70px;
